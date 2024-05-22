@@ -13,7 +13,7 @@ RUN  sed -i '1229d' /usr/bin/makepkg
 RUN git clone https://aur.archlinux.org/urlencode.git
 RUN (cd urlencode && makepkg -i --noconfirm)
 
-# Fix vlc, libao, makepkg
+# Fix vlc, libao.conf
 RUN  sed -i 's/geteuid/getppid/' /usr/bin/vlc
 RUN  rm /etc/libao.conf
 RUN  echo "default_driver=pulse" > /etc/libao.conf
