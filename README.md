@@ -26,8 +26,7 @@ The station ID can be retrieved 2 ways; from pianobar itself, or a web browser. 
 `101016533437788715` is the station ID in the example below. 
 Press 's' to get a list of your stations and retrieve it's ID:
 
-```
-# pianobar
+``` 
 Welcome to pianobar (2020.11.28)! Press ? for a list of commands.
 (i) Login... Ok.
 (i) Get stations... Ok.
@@ -46,13 +45,13 @@ When you play a station on the website, the url in your browser gives you the st
 ### Docker
 ##### Build it!
 Now that we've gotten all that out of the way, build the image with the following command:
-```sh
+```
 # docker build https://github.com/deadlypantsd/pianobar_docker/Dockerfile -t <imagename>
 ```
 `<imagename>` can be anything... but I would suggest 'pianobar'.
 ##### Run it!
 Create the container. I find the commandline to be much easier.
-```sh
+```
 # docker run -it -d --name pianobar-stream \
   -e SHOUT_SERVER=172.16.0.5:8000 \
   -e SHOUT_AUTH=source:hackme \
